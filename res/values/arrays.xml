@@ -7,7 +7,12 @@
         <item>両方！</item>
     </string-array>
 
-    <string-array name="quest_day1"></string-array>
+    <string-array name="quest_day1">
+        <item>おっちょこちょい</item>
+        <item>巫女は1位じゃなくても世界1位だと思う</item>
+        <item>ここには夢がちゃんとあると思う</item>
+        <item>やっぱりアリスのつくるブラウニーはうまいな</item>
+    </string-array>
 
     <string-array name="quest_day2"></string-array>
 
