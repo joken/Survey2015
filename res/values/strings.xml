@@ -9,5 +9,9 @@
     <string name="tgtsex">あいての性別</string>
     <string name="tgtage">あいての年齢(最小～最大)</string>
     <string name="from">～</string>
+    <string name="summary">全くそう思わない(星1)~とてもそう思う(星5)の5段階で回答してください</string>
+    <string name="dialog_ok">いいよ</string>
+    <string name="dialog_no">Noooooo!</string>
+    <string name="dialog_defmsg">これでok?</string>
 
 </resources>

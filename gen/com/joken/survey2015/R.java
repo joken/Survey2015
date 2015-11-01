@@ -18,6 +18,7 @@ public final class R {
     public static final class color {
         public static final int black=0x7f080001;
         public static final int lightgray=0x7f080000;
+        public static final int white=0x7f080002;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -36,21 +37,24 @@ public final class R {
     public static final class id {
         public static final int TextView01=0x7f0a000c;
         public static final int TextView02=0x7f0a000e;
-        public static final int action_settings=0x7f0a0013;
-        public static final int item=0x7f0a0011;
+        public static final int action_settings=0x7f0a0016;
+        public static final int answerBar=0x7f0a0015;
+        public static final int item=0x7f0a0012;
         public static final int myagearea=0x7f0a0005;
         public static final int mysexarea=0x7f0a000d;
         public static final int namearea=0x7f0a0002;
-        public static final int questList=0x7f0a0010;
+        public static final int questList=0x7f0a0011;
+        public static final int questText=0x7f0a0014;
         public static final int tableLayout1=0x7f0a0000;
         public static final int tableRow1=0x7f0a0001;
         public static final int tableRow2=0x7f0a0003;
         public static final int tableRow3=0x7f0a0006;
         public static final int tableRow4=0x7f0a000b;
-        public static final int text1=0x7f0a0012;
+        public static final int text1=0x7f0a0013;
         public static final int textView1=0x7f0a0004;
         public static final int textView2=0x7f0a0009;
         public static final int textView3=0x7f0a0007;
+        public static final int textView4=0x7f0a0010;
         public static final int tgtagearea1=0x7f0a0008;
         public static final int tgtagearea2=0x7f0a000a;
         public static final int tgtsexarea=0x7f0a000f;
@@ -59,6 +63,7 @@ public final class R {
         public static final int activity_main=0x7f030000;
         public static final int dropdown_list=0x7f030001;
         public static final int list=0x7f030002;
+        public static final int questitem=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f090000;
@@ -66,10 +71,14 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
+        public static final int dialog_defmsg=0x7f06000b;
+        public static final int dialog_no=0x7f06000a;
+        public static final int dialog_ok=0x7f060009;
         public static final int from=0x7f060007;
         public static final int myage=0x7f060004;
         public static final int mysex=0x7f060003;
         public static final int name=0x7f060002;
+        public static final int summary=0x7f060008;
         public static final int tgtage=0x7f060006;
         public static final int tgtsex=0x7f060005;
     }
