@@ -7,12 +7,49 @@
     </string-array>
 
     <string-array name="quest_day1">
-        <item>おっちょこちょい</item>
-        <item>巫女は1位じゃなくても世界1位だと思う</item>
-        <item>ここには夢がちゃんとあると思う</item>
-        <item>やっぱりアリスのつくるブラウニーはうまいな</item>
+		<item>自分は逃げ腰だ</item>
+		<item>みんながやるものは自分もやる。</item>
+		<item>自分は常識人</item>
+		<item>自分が悪いことをしたらすぐに謝れる。</item>
+		<item>お金を計画的に使う</item>
+		<item>友人が恥ずかしいことをすると他人のフリをする。</item>
+		<item>コンビニ弁当を食べ終わると捨てるのにも関わらず，包装を元に戻す。</item>
+		<item>黙々と取り組むことが出来る</item>
+		<item>ごり押しに弱い</item>
+		<item>人の間違いに「違うよ」と言えない</item>
+		<item>我が生涯に一片の悔い無し</item>
+		<item>極端な競争社会でもいい</item>
+		<item>ミサイルでサーフィンがしたい</item>
+		<item>6つ子だったらよかった</item>
+		<item>2Dアクションと3Dアクションでは2Dのほうが好きだ</item>
+		<item>心がぴょんぴょんするんじゃぁ〜</item>
+		<item>ボランティアでエンジニアを働かせるのは正しい</item>
+		<item>自分は下郎だと思う</item>
+		<item>がっこうにくらしたい</item>
+		<item>ここまでの質問は全部ふざけてる</item>
     </string-array>
 
-    <string-array name="quest_day2"></string-array>
+    <string-array name="quest_day2">
+		<item>攻めより守り</item>
+		<item>「自分へのごほうび」をよく買う</item>
+		<item>生活が希望に満ち溢れている</item>
+		<item>自分はなにか使命を持って生まれてきたと思う</item>
+		<item>洗練されたコミュニケーションが出来る</item>
+		<item>ほめて伸びるタイプ</item>
+		<item>周囲の評価が気になる</item>
+		<item>最近のニュースはつまらないと思う</item>
+		<item>「急がばまわれ」にイライラしない</item>
+		<item>一人で行動する方が好きだ。</item>
+		<item>新世界の神になりたい</item>
+		<item>子供の名前はくじ引きで決めてもいい</item>
+		<item>誰かを捗らせたい</item>
+		<item>何事も決闘で解決するのが一番だ</item>
+		<item>イカかわいいですくコ:ミ</item>
+		<item>レベルを持たないならレベル０だ</item>
+		<item>この腐った世界に革命を起こしたい</item>
+		<item>がっこうには夢がちゃんとある</item>
+		<item>人生の勝利法は常に上に座すことだ</item>
+		<item>ここまでの質問は全部ふざけてる</item>
+    </string-array>
 
 </resources>
