@@ -91,9 +91,14 @@ public class MainActivity extends Activity {
     			,tgtagemin = (TextView)findViewById(R.id.tgtagearea1)
     			,tgtagemax = (TextView)findViewById(R.id.tgtagearea2);
     	human.setName(name.getText().toString());
-    	human.setMyage(Integer.valueOf(myage.getText().toString()));
-    	human.setTgtage(Integer.valueOf(tgtagemin.getText().toString()), Integer.valueOf(tgtagemax.getText().toString()));
-    	ExpandableListView ls = (ExpandableListView)findViewById(R.id.questList);
+    	try {
+			human.setMyage(Integer.valueOf(myage.getText().toString()));
+			human.setTgtage(Integer.valueOf(tgtagemin.getText().toString()),
+					Integer.valueOf(tgtagemax.getText().toString()));
+		} catch (NumberFormatException e) {
+			showtoast("入力がおかしいよ");
+		}
+		ExpandableListView ls = (ExpandableListView)findViewById(R.id.questList);
     	Log.w(this.getLocalClassName(), ls.getExpandableListAdapter().toString());
     	QuestExpandableAdapter ad = (QuestExpandableAdapter)ls.getExpandableListAdapter();
     	for(int i = 0; i < ad.getGroupCount(); i++){
