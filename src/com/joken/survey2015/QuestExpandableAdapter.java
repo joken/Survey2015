@@ -46,17 +46,18 @@ public class QuestExpandableAdapter extends BaseExpandableListAdapter {
 		}
 		for(int j = 0; j < 4; j++){
 			ArrayList<QuestItem> q = new ArrayList<QuestItem>();
-			for(int i = j*questcount; i < j+questcount; i++){
+			for(int i = j*questcount; i < i+questcount; i++){
 				if(i >= questres.length){break;}
 				Log.d(this.getClass().getName(), "quest"+i);
 				q.add(new QuestItem(questres[i]));
 			}
+   Log.d(getLocalClassName(),q.toString());
 			children.add(q);
 		}
 	}
 
 	private void setGroup(){
-		int min = 1,max = questcount -1;
+		int min = 1,max = questcount;
 		for(int i = 0; i < children.size(); i++){
 			groups.add("問題" + min + "～" + max);
 			min += 10;

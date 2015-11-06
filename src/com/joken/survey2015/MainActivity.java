@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
     }
 
     private void setHuman(){
-    	int index = this.getSharedPreferences(MAIN_PREF, MODE_PRIVATE).getInt(CURRENT_ID, 1000);
+    	int index = this.getSharedPreferences(MAIN_PREF, MODE_PRIVATE).getInt(CURRENT_ID, 500);
     	human = new Human(index);
     }
 
@@ -85,7 +85,7 @@ public class MainActivity extends Activity {
     	return bt;
     }
 
-    private void setdata(){
+    private boolean setdata(){
     	TextView name = (TextView)findViewById(R.id.namearea)
     			,myage = (TextView)findViewById(R.id.myagearea)
     			,tgtagemin = (TextView)findViewById(R.id.tgtagearea1)
@@ -97,6 +97,7 @@ public class MainActivity extends Activity {
 					Integer.valueOf(tgtagemax.getText().toString()));
 		} catch (NumberFormatException e) {
 			showtoast("入力がおかしいよ");
+   return false;
 		}
 		ExpandableListView ls = (ExpandableListView)findViewById(R.id.questList);
     	Log.w(this.getLocalClassName(), ls.getExpandableListAdapter().toString());
@@ -108,10 +109,12 @@ public class MainActivity extends Activity {
     		}
     	}
     	name.setText(null);myage.setText(null);tgtagemin.setText(null);tgtagemax.setText(null);
+     return true;
     }
 
-    //TODO IDを設定(1000~1999)
-    private void exportdata(){
+    //TODO IDを設定(1000~1999)->500~599に変更
+    private void exportdata(boolean isEnableExport){
+     if(!isEnableExport){return;}
     	int day = this.getSharedPreferences(MAIN_PREF, MODE_PRIVATE).getInt(DAY_VAL, 1);
     	File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/joken/day"+day+".csv");
     	try{
@@ -190,8 +193,7 @@ public class MainActivity extends Activity {
     public void onDialogCallback(int type){
     	switch(type){
     	case 0:
-    		this.setdata();
-    		this.exportdata();
+    		this.exportdata(this.setdata());
     		break;
     	}
     }
