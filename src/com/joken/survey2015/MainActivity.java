@@ -128,6 +128,7 @@ public class MainActivity extends Activity {
 			human.exportExternalStrorage(out);
 			out.close();
 	    	showtoast("success save csv");
+      showdialog(R.string.exp_success_tit, "あなたのIDは"+human.getID()+"です。\n＊おぼえてね！", 2);
 	    	Editor ed = this.getSharedPreferences(MAIN_PREF, MODE_PRIVATE).edit();
 	    	ed.putInt(CURRENT_ID, human.getID() + 1);
 	    	ed.commit();
@@ -200,6 +201,10 @@ public class MainActivity extends Activity {
 
     private void showdialog(int title,int msg, int type){
     	MyAlertDialogFragment.newInstance(title, msg, type).show(getFragmentManager(), this.getPackageName());
+    }
+
+    private void showdialog(int title,String msg, int type){
+     MyAlertDialogFragment.newInstance(title, msg, type).show(getFragmentManager(), this.getPackageName());
     }
 
     private void showtoast(String msg){

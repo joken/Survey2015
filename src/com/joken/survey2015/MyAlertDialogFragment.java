@@ -18,6 +18,16 @@ public class MyAlertDialogFragment extends DialogFragment {
 		return frg;
 	}
 
+ public static MyAlertDialogFragment newInstance(int title, String message, int type){
+  MyAlertDialogFragment frg = new MyAlertDialogFragment();
+		Bundle naiyou = new Bundle();
+		naiyou.putInt("title", title);
+		naiyou.putString("message", message);
+		naiyou.putInt("type", type);
+		frg.setArguments(naiyou);
+		return frg;
+ }
+
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState){
 		int title = this.getArguments().getInt("title", 0);
@@ -43,6 +53,20 @@ public class MyAlertDialogFragment extends DialogFragment {
 				}
 			})
 			.create();
+   break;
+  case 2:
+   String msg = getArguments().getString("message", "");
+   dlog = new AlertDialog.Builder(getActivity())
+   .setTitle(title)
+   .setMessage(msg)
+   .setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener(){
+    @Override
+    public void onClick(DialogInterface dialog, int witch){
+     //なにもしないょ
+    }
+   })
+   .create();
+   break;
 		default:
 			dlog = new AlertDialog.Builder(getActivity())
 			.setMessage(R.string.dialog_defmsg)
@@ -60,6 +84,7 @@ public class MyAlertDialogFragment extends DialogFragment {
 				}
 			})
 			.create();
+   break;
 		}
 
 		return dlog;

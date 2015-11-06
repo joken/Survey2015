@@ -13,5 +13,6 @@
     <string name="dialog_ok">いいよ</string>
     <string name="dialog_no">Noooooo!</string>
     <string name="dialog_defmsg">これでok?</string>
+    <string name="exp_success_tit">入力せいこう！</string>
 
 </resources>
