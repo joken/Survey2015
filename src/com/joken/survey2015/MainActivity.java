@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.SharedPreferences.Editor;
@@ -32,6 +33,9 @@ public class MainActivity extends Activity {
 	public static final String CURRENT_ID = "current_id";
 
 	private Human human;
+	private int questcount;
+	private ArrayList<ArrayList<QuestItem>> children;
+	private ArrayList<String> groups;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +51,45 @@ public class MainActivity extends Activity {
     	human = new Human(index);
     }
 
+    private void setQuest(){
+		String[] questres;
+		this.children = new ArrayList<ArrayList<QuestItem>>();
+		int day = getSharedPreferences(MainActivity.MAIN_PREF, Activity.MODE_PRIVATE).getInt(MainActivity.DAY_VAL,1);
+		questcount = getSharedPreferences(MainActivity.MAIN_PREF,Activity.MODE_PRIVATE).getInt(MainActivity.QUEST_COUNT, 10);
+		switch(day){
+		case 1:
+			questres = getResources().getStringArray(R.array.quest_day1);
+			break;
+		case 2:
+			questres = getResources().getStringArray(R.array.quest_day2);
+		default:
+			questres = new String[40];
+			questres[0] = "could not get quest string";
+		}
+		ArrayList<QuestItem> q = new ArrayList<QuestItem>();
+		for(String s : questres){
+			q.add(new QuestItem(s));
+			Log.d(getPackageCodePath(), q.toString());
+		}
+		children = CollectionUtils.devide(q, questcount);
+	}
+
+	private void setGroup(){
+		groups = new ArrayList<String>();
+		int min = 1,max = questcount;
+		for(int i = 0; i < children.size(); i++){
+			groups.add("問題" + min + "～" + max);
+			min += 10;
+			max += 10;
+		}
+	}
+
 	private void setExpandableListView() {
+		this.setQuest();
+		this.setGroup();
 		ExpandableListView ex = (ExpandableListView)this.findViewById(R.id.questList);
 		ex.addFooterView(getFooterView(), null, false);
-        ex.setAdapter(new QuestExpandableAdapter(this.getApplicationContext()));
+        ex.setAdapter(new QuestExpandableAdapter(this.getApplicationContext(), this.groups, this.children));
 	}
 
     @Override

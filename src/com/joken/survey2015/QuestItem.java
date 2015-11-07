@@ -22,6 +22,10 @@ public class QuestItem {
 		return this.questAns;
 	}
 
+	public int getID(){
+		return this.hashCode();
+	}
+
 	@Override
 	public String toString(){
 		return "quest text:"+questRaw + " ans : "+questAns;
