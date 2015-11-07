@@ -6,6 +6,11 @@
         <item>おんなのこ</item>
     </string-array>
 
+    <string-array name="day_list">
+        <item>1にちめ</item>
+        <item>2にちめ</item>
+    </string-array>
+
     <string-array name="quest_day1">
 		<item>自分は逃げ腰だ</item>
 		<item>みんながやるものは自分もやる。</item>

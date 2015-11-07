@@ -145,15 +145,6 @@
         </TableRow>
     </TableLayout>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tableLayout1"
-        android:layout_below="@+id/tableLayout1"
-        android:text="@string/summary"
-        android:textColor="@color/black" />
-
     <ExpandableListView
         android:id="@+id/questList"
         android:layout_width="match_parent"
@@ -162,5 +153,15 @@
         android:layout_below="@+id/textView4" >
     </ExpandableListView>
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/questList"
+        android:layout_below="@+id/tableLayout1"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/summary"
+        android:textColor="@color/black" />
 
 </RelativeLayout>

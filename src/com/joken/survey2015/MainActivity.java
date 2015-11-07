@@ -8,6 +8,7 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Environment;
@@ -62,8 +63,9 @@ public class MainActivity extends Activity {
 			break;
 		case 2:
 			questres = getResources().getStringArray(R.array.quest_day2);
+			break;
 		default:
-			questres = new String[40];
+			questres = new String[1];
 			questres[0] = "could not get quest string";
 		}
 		ArrayList<QuestItem> q = new ArrayList<QuestItem>();
@@ -107,7 +109,8 @@ public class MainActivity extends Activity {
         int id = item.getItemId();
         switch(id) {
         case R.id.action_settings:
-            return true;
+            Intent it = new Intent(this.getApplicationContext(), PropatyActivity.class);
+            this.startActivity(it);
         }
         return super.onOptionsItemSelected(item);
     }

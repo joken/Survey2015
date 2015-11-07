@@ -14,5 +14,11 @@
     <string name="dialog_no">Noooooo!</string>
     <string name="dialog_defmsg">これでok?</string>
     <string name="exp_success_tit">入力せいこう！</string>
+    <string name="title_activity_propaty">ぷろぱてぃ</string>
+    <string name="hello_propaty">Preferenceのあたいをいじるよ(関係者がさわってね！！！)</string>
+    <string name="day_prop">なんにちめ？</string>
+    <string name="id_prop">SaveされるIDは？</string>
+    <string name="prop_enter">適用</string>
+    <string name="questcount_prop">1こうもくのもんだいすうは？</string>
 
 </resources>
