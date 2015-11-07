@@ -74,6 +74,7 @@ public final class R {
         public static final int dialog_defmsg=0x7f06000b;
         public static final int dialog_no=0x7f06000a;
         public static final int dialog_ok=0x7f060009;
+        public static final int exp_success_tit=0x7f06000c;
         public static final int from=0x7f060007;
         public static final int myage=0x7f060004;
         public static final int mysex=0x7f060003;

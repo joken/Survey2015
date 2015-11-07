@@ -22,4 +22,9 @@ public class QuestItem {
 		return this.questAns;
 	}
 
+	@Override
+	public String toString(){
+		return "quest text:"+questRaw + " ans : "+questAns;
+	}
+
 }

@@ -44,16 +44,27 @@ public class QuestExpandableAdapter extends BaseExpandableListAdapter {
 			questres = new String[40];
 			questres[0] = "could not get quest string";
 		}
-		for(int j = 0; j < 4; j++){
+		ArrayList<QuestItem> q = new ArrayList<QuestItem>(9);
+		for(String s : questres){
+			q.add(new QuestItem(s));
+			if(q.size() > 10){
+				Log.d(s, "added");
+				children.add(q);
+				q = null;
+				q = new ArrayList<QuestItem>(9);
+			}
+			Log.d(context.getPackageCodePath(), q.toString());
+		}
+		/*for(int j = 0; j < 4; j++){
 			ArrayList<QuestItem> q = new ArrayList<QuestItem>();
-			for(int i = j*questcount; i < i+questcount; i++){
+			for(int i = j*questcount; i < j*questcount+questcount; i++){
 				if(i >= questres.length){break;}
 				Log.d(this.getClass().getName(), "quest"+i);
 				q.add(new QuestItem(questres[i]));
 			}
-   Log.d(getLocalClassName(),q.toString());
+   Log.d(context.getPackageCodePath(),q.toString());
 			children.add(q);
-		}
+		}*/
 	}
 
 	private void setGroup(){
